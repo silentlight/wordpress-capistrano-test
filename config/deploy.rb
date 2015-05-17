@@ -4,7 +4,8 @@ lock '3.2.1'
 set :application, 'WpCapistrano'
 set :repo_url, 'git@github.com:silentlight/wordpress-capistrano-test.git'
 
-set :branch, :master
+# Default branch is :master
+set :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/home1/himen15/public_html/synergeelabs.com/wp-capistrano'

@@ -9,5 +9,3 @@ set :ssh_options, {
 }
 
 set :tmp_dir, "/home1/himen15/tmp"
-
-set :branch, :dev
